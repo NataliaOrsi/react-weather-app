@@ -1,14 +1,47 @@
 import React from "react";
-import axios from "axios";
+
+import "./App.css";
 
 export default function Weather(props) {
-    function displayWeather(response) {
-        alert(`The weather in ${response.data.name} is ${Math.round(response.data.main.temp)}`);
-    }
-
-    let apiKey = `3b2c6af1778711e6c3af06800ecbd9b8`;
-    let url = `https://api.openweathermap.org/data/2.5/weather?q=${props.city}&appid=${apiKey}&units=metric`;
-    axios.get(url).then(displayWeather);
-
-    return <h2>Hello from Weather</h2>
+    return (
+        <div className="forecast-today">
+            <div className="row">
+              <div className="col-6">
+                <h1>{props.city}</h1>
+                <p className="main-date">Monday 09:36</p>
+                <h2>
+                  <span className="main-temperature">
+                    {props.temperature}
+                  </span>
+                  <span className="temperature-units">
+                    <a href="#0" class="active">
+                      °C
+                    </a>
+                    /
+                    <a href="#0">
+                      °F
+                    </a>
+                  </span>
+                </h2>
+                <img
+                  src={props.icon}
+                  alt=""
+                  className="float-left main-weather-icon"
+                />
+              </div>
+              <div className="col-6 description-list">
+                <ul>
+                  <li>{props.description}</li>
+                  <li>
+                    Humidity: <strong>{props.humidity}</strong>%
+                  </li>
+                  <li>
+                    Wind: <strong>{props.wind}</strong>km/h
+                  </li>
+                </ul>
+              </div>
+            </div>
+        </div>
+        
+    );
 }

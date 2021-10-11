@@ -1,15 +1,24 @@
-import Weather from "./Weather"
-import './App.css';
+import Search from "./Search";
+
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>
-          Hello World
-        </h1>
-        <Weather city="Paris" />
-      </header>
+      <div className="weather-app">
+        <div className="container">
+          <Search defaultCity="Paris" />
+        </div>
+      </div>
+      <footer>
+        <a
+          href="https://github.com/NataliaOrsi/shecodes/tree/main/vanilla-weather-app"
+          rel="noreferrer"
+        >
+          Open-source code
+        </a> {" "}
+        by Natalia de Mesquita Orsi Vieira
+      </footer>
     </div>
   );
 }
