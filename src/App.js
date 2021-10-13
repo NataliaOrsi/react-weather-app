@@ -12,11 +12,12 @@ function App() {
       </div>
       <footer>
         <a
-          href="https://github.com/NataliaOrsi/shecodes/tree/main/vanilla-weather-app"
+          href="https://github.com/NataliaOrsi/react-weather-app"
+          target="_blank"
           rel="noreferrer"
         >
           Open-source code
-        </a> {" "}
+        </a>{" "}
         by Natalia de Mesquita Orsi Vieira
       </footer>
     </div>

@@ -94,8 +94,8 @@ li:first-letter {
 
 .main-weather-icon {
   position: relative;
-  top: -120px;
-  left: 130px;
+  top: -85px;
+  left: 140px;
   width: 150px;
   height: 150px;
 }

@@ -13,10 +13,11 @@ export default function Search(props) {
       ready: true,
       cityName: response.data.name,
       temperature: Math.round(response.data.main.temp),
+      dt: new Date(response.data.dt * 1000),
       description: response.data.weather[0].description,
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
-      icon: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      icon: response.data.weather[0].icon,
     });
   }
 
@@ -45,7 +46,8 @@ export default function Search(props) {
                 className="form-control"
                 type="search"
                 placeholder="Enter a city..."
-                autocomplete="off"
+                autoComplete="off"
+                autoFocus="on"
                 onChange={updateCity}
               />
             </div>
@@ -61,6 +63,7 @@ export default function Search(props) {
         <Weather
           city={message.cityName}
           temperature={message.temperature}
+          dt={message.dt}
           icon={message.icon}
           description={message.description}
           humidity={message.humidity}
