@@ -12,7 +12,7 @@ export default function Search(props) {
     setMessage({
       ready: true,
       cityName: response.data.name,
-      temperature: Math.round(response.data.main.temp),
+      temperature: response.data.main.temp,
       dt: new Date(response.data.dt * 1000),
       description: response.data.weather[0].description,
       humidity: response.data.main.humidity,
