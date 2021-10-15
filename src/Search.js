@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Weather from "./Weather";
+import WeatherForecast from "./WeatherForecast";
 import axios from "axios";
 
 import "./App.css";
@@ -12,6 +13,7 @@ export default function Search(props) {
     setMessage({
       ready: true,
       cityName: response.data.name,
+      coordinates: response.data.coord,
       temperature: response.data.main.temp,
       dt: new Date(response.data.dt * 1000),
       description: response.data.weather[0].description,
@@ -69,6 +71,7 @@ export default function Search(props) {
           humidity={message.humidity}
           wind={message.wind}
         />
+        <WeatherForecast coordinates={message.coordinates} />
       </div>
     );
   } else {

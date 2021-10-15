@@ -1,0 +1,36 @@
+.WeatherForecast {
+    text-align: center;
+}
+
+.WeatherForecast .forecast-week-day {
+    text-align: center;
+    font-family: "Breef Serif", serif;
+    font-size: 24px;
+    color: #a56cc1;
+}
+
+.WeatherForecast .forecast-week-date {
+    text-align: center;
+    font-size: 16px;
+    color: #a6acec;
+}
+
+.WeatherForecast .weather-icons {
+    padding: 15px 0;
+}
+
+.WeatherForecast .forecast-week-temperatures {
+    text-align: center;
+}
+
+.WeatherForecast .week-max-temperature {
+    color: #a56cc1;
+    padding: 0 0 0 10px;
+    font-weight: bold;
+}
+
+.WeatherForecast .week-min-temperature {
+    color: #a6acec;
+    padding: 10px;
+    font-weight: bold;
+}
