@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Weather from "./Weather";
 import WeatherForecast from "./WeatherForecast";
 import axios from "axios";
-import { useTranslation, Trans } from "react-i18next";
+import { useTranslation } from "react-i18next";
 
 import "./App.css";
 
