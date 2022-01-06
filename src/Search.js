@@ -2,10 +2,13 @@ import React, { useState } from "react";
 import Weather from "./Weather";
 import WeatherForecast from "./WeatherForecast";
 import axios from "axios";
+import { useTranslation, Trans } from "react-i18next";
 
 import "./App.css";
 
 export default function Search(props) {
+
+  const { t } = useTranslation();
   const [city, setCity] = useState(props.defaultCity);
   const [message, setMessage] = useState({ ready: false });
 
@@ -47,7 +50,7 @@ export default function Search(props) {
               <input
                 className="form-control"
                 type="search"
-                placeholder="Enter a city..."
+                placeholder={t('description.suggestion')}
                 autoComplete="off"
                 autoFocus="on"
                 onChange={updateCity}
@@ -57,7 +60,7 @@ export default function Search(props) {
               <input
                 className="btn btn-primary w-100 search-button"
                 type="submit"
-                value="Search"
+                value={t('description.searchButton')}
               />
             </div>
           </div>
