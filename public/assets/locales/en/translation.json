@@ -1,0 +1,8 @@
+{
+  "description": {
+    "part1": "Humidity: ",
+    "part2": "Wind: ",
+    "searchButton": "Search",
+    "suggestion": "Enter a city..."
+  }
+}
