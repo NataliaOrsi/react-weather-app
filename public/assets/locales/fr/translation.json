@@ -1,0 +1,8 @@
+{
+  "description": {
+    "part1": "Humidité: ",
+    "part2": "Vent: ",
+    "searchButton": "Chercher",
+    "suggestion": "Indiquez une ville..."
+  }
+}
