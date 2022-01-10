@@ -38,6 +38,11 @@ li:first-letter {
   );
 }
 
+.row-position {
+  margin: 10px 0px;
+  padding: 5px;
+}
+
 .search-form .search-button {
   background: #a56cc1;
   border-color: #a56cc1;
@@ -53,6 +58,7 @@ li:first-letter {
 .forecast-today {
   margin-top: 40px;
 }
+
 .forecast-today h1 {
   font-family: "Bree Serif", serif;
   font-size: 50px;
@@ -61,17 +67,47 @@ li:first-letter {
   color: #a56cc1;
 }
 
-.forecast-today button {
+.App .dropdown-button button {
+  cursor: pointer;
+  background: white;
+  color: #a56cc1;
+  padding: 5px 40px;
+  border: 1px solid #a56cc1;
+}
+
+.App .dropdown-button button:visited {
+  background-color: #a56cc1;
+  color: white;
+  border: 1px solid #a56cc1;
+  box-shadow : none;
+}
+
+.App .dropdown-button button:focus {
+  background-color: #a56cc1;
+  color: white;
+  border: 1px solid #a56cc1;
+  box-shadow : none!important;
+}
+
+.App .dropdown-button button:hover {
+  background-color: #a56cc1;
+  color: white;
+  border: 1px solid #a56cc1;
+}
+
+.App .dropdown-button button:active {
+  background-color: #a56cc1!important;
+  color: white!important;
+  border: 1px solid #a56cc1!important;
+  box-shadow : none;
+}
+
+.language-buttons {
   cursor: pointer;
   background: white;
   color: #a56cc1;
   padding: 0 8px;
   border: 1px solid #a56cc1;
-  display: inline-block;
-  text-align: left;
-  position: relative;
-  top: -220px;
-  left: 190px;
 }
 
 .main-temperature {

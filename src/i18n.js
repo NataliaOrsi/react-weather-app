@@ -21,7 +21,7 @@ i18n
     // reference: https://www.i18next.com/how-to/add-or-load-translations#load-using-a-backend-plugin
     backend: {
       fallbackLng: "en",
-      supportedLngs: ["en", "pt"],
+      supportedLngs: ["en", "pt", "es", "fr", "nl"],
       loadPath: "/assets/locales/{{lng}}/translation.json",
     },
   });

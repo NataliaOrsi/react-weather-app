@@ -1,4 +1,5 @@
 import Search from "./Search";
+import Translator from "./Translator";
 
 import "./App.css";
 
@@ -7,6 +8,7 @@ function App() {
     <div className="App">
       <div className="weather-app">
         <div className="container">
+          <Translator />
           <Search defaultCity="Paris" />
         </div>
       </div>

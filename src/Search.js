@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next";
 
 import "./App.css";
 
+
 export default function Search(props) {
 
   const { t } = useTranslation();
@@ -45,12 +46,12 @@ export default function Search(props) {
     return (
       <div>
         <form className="search-form" onSubmit={handleSubmit}>
-          <div className="row">
+          <div className="row row-position">
             <div className="col-9">
               <input
                 className="form-control"
                 type="search"
-                placeholder={t('description.suggestion')}
+                placeholder={t("description.suggestion")}
                 autoComplete="off"
                 autoFocus="on"
                 onChange={updateCity}
@@ -60,7 +61,7 @@ export default function Search(props) {
               <input
                 className="btn btn-primary w-100 search-button"
                 type="submit"
-                value={t('description.searchButton')}
+                value={t("description.searchButton")}
               />
             </div>
           </div>

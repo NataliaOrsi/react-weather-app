@@ -6,13 +6,8 @@ import { useTranslation, Trans } from "react-i18next";
 
 import "./App.css";
 
-const lngs = {
-  en: { nativeName: 'English' },
-  pt: { nativeName: 'Portugues' }
-};
-
 export default function Weather(props) {
-    const { t, i18n } = useTranslation();
+    const { t } = useTranslation();
 
     return (
       <div className="forecast-today">
@@ -43,22 +38,6 @@ export default function Weather(props) {
                 km/h
               </li>
             </ul>
-            <div>
-              {Object.keys(lngs).map((lng) => (
-                <button
-                  key={lng}
-                  style={{
-                    fontWeight:
-                      i18n.resolvedLanguage === lng ? "bold" : "normal",
-                  }}
-                  type="submit"
-                  onClick={() => i18n.changeLanguage(lng)}
-                >
-                  {" "}
-                  {lngs[lng].nativeName}{" "}
-                </button>
-              ))}
-            </div>
           </div>
         </div>
       </div>
