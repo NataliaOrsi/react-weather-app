@@ -13,7 +13,7 @@ const lngs = {
 };
 
 export default function Translator() {
-    const { t, i18n } = useTranslation();
+    const { i18n } = useTranslation();
     return (
         <div className="row row-position">
           <div className="col-9"></div>
