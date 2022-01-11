@@ -1,5 +1,6 @@
 {
   "description": {
+    "languageButton": "Langues",
     "part1": "Humidité: ",
     "part2": "Vent: ",
     "searchButton": "Chercher",

@@ -73,6 +73,7 @@ li:first-letter {
   color: #a56cc1;
   padding: 5px 40px;
   border: 1px solid #a56cc1;
+  width: 100%;
 }
 
 .App .dropdown-button button:visited {

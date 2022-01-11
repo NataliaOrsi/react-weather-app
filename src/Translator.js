@@ -13,32 +13,32 @@ const lngs = {
 };
 
 export default function Translator() {
-    const { i18n } = useTranslation();
+    const { t, i18n } = useTranslation();
     return (
-        <div className="row row-position">
-          <div className="col-9"></div>
-          <div className="col-3">
-            <DropdownButton
-              className="dropdown-button"
-              drop="down"
-              title="Language"
-            >
-              {Object.keys(lngs).map((lng) => (
-                <Dropdown.Item
-                  className="languages-button"
-                  as="button"
-                  key={lng}
-                  style={{
-                    fontWeight: i18n.resolvedLanguage === lng ? "bold" : "normal",
-                  }}
-                  onClick={() => i18n.changeLanguage(lng)}
-                >
-                  {" "}
-                  {lngs[lng].nativeName}{" "}
-                </Dropdown.Item>
-              ))}
-            </DropdownButton>
-          </div>
+      <div className="row row-position">
+        <div className="col-9"></div>
+        <div className="col-3">
+          <DropdownButton
+            className="dropdown-button"
+            drop="down"
+            title={t("description.languageButton")}
+          >
+            {Object.keys(lngs).map((lng) => (
+              <Dropdown.Item
+                className="languages-button"
+                as="button"
+                key={lng}
+                style={{
+                  fontWeight: i18n.resolvedLanguage === lng ? "bold" : "normal",
+                }}
+                onClick={() => i18n.changeLanguage(lng)}
+              >
+                {" "}
+                {lngs[lng].nativeName}{" "}
+              </Dropdown.Item>
+            ))}
+          </DropdownButton>
         </div>
+      </div>
     );
 }
